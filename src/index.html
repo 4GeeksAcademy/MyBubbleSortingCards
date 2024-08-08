@@ -13,16 +13,62 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container-fluid p-2" id="contenedor">
+      <div
+        class="container-fluid d-flex gap-2 align-items-center my-2"
+        id="header"
+      >
+        <p class="fw-bold m-0">Original:</p>
+        <input type="text" id="input-cantidad" />
+        <div class="d-grid gap-2 d-md-block align-items-center">
+          <button
+            class="btn btn-outline-light py-0 align-items-center"
+            type="button"
+            id="btn-draw"
+          >
+            Draw
+          </button>
+          <button
+            class="btn btn-outline-light py-0"
+            type="button"
+            id="btn-sort"
+          >
+            Sort
+          </button>
+        </div>
+      </div>
+      <div
+        class="container-fluid d-flex gap-2 align-items-center my-2"
+        id="muestraCartas"
+      >
+        <!-- <div
+          class="card text-center border-white border-1 rounded-2 shadow-lg"
+          id="tarjeta"
+          style="width: 80px; height: 130px;"
+        >
+          <div
+            class="card-header text-start fs-5 bg-white border-white rounded-2 p-1"
+          >
+            <div id="palocab"></div>
+          </div>
+          <div
+            class="card-body fw-bold fs-4 d-flex text-center justify-content-center align-items-center p-1"
+          >
+            <div id="numero"></div>
+          </div>
+          <div
+            class="card-footer text-end fs-5 bg-white border-white rounded-2 p-1"
+          >
+            <div id="palopie"></div>
+          </div>
+        </div> -->
+      </div>
+      <div class="container-fluid" id="cuerpo">
+        <p class="fw-bold">Bubble Log:</p>
+        <div
+          class="container-fluid d-flex gap-2 align-items-center my-2"
+          id="bubble"
+        ></div>
       </div>
     </div>
   </body>

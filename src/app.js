@@ -142,7 +142,7 @@ function dibujarColumna() {
     console.log(typeof cartas[i]);
 
     columna += ` 
-      <div class="card text-center border-white border-1 rounded-2 shadow-lg" style="width: 80px; height: 130px;">
+      <div class="card text-center border-white border-1 rounded-2 shadow-lg p-0" style="width: 80px; height: 130px;">
         <div class="card-header text-start fs-5 bg-white border-white rounded-2 p-1" style = "color: ${
           cartas[i] == "♦" || cartas[i] == "♥" ? "red" : "black"
         }"; >

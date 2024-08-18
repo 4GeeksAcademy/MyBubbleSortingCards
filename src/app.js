@@ -135,16 +135,33 @@ function sortearCartas() {
 }
 
 function dibujarColumna() {
-  cartita = `<div
-          class="card text-center border-white border-1 rounded-2 shadow-lg "
-          style="width: 80px; height: 130px;"
-        >${cartas}</div>`;
+  let columna = "<div class='row gap-2 my-2'>";
 
-  bubblecartas = cartita.repeat(cantuser);
+  for (let i = 0; i < cartas.length; i += 3) {
+    // eslint-disable-next-line no-console
+    console.log(typeof cartas[i]);
 
-  let columna = `<div class="row my-2 gap-2">
-  ${bubblecartas} 
-  </div>`;
+    columna += ` 
+      <div class="card text-center border-white border-1 rounded-2 shadow-lg" style="width: 80px; height: 130px;">
+        <div class="card-header text-start fs-5 bg-white border-white rounded-2 p-1" style = "color: ${
+          cartas[i] == "♦" || cartas[i] == "♥" ? "red" : "black"
+        }"; >
+          ${cartas[i]} 
+        </div>
+        <div class="card-body fw-bold fs-4 d-flex text-center justify-content-center align-items-center p-1">
+          ${cartas[i + 1]}
+        </div>
+        <div class="card-footer text-end fs-5 bg-white border-white rounded-2 p-1" style = "color:${
+          cartas[i + 2] == "♦" || cartas[i + 2] == "♥" ? "red" : "black"
+        };" >
+          ${cartas[i + 2]}
+        </div>
+      </div>`;
+  }
+
+  columna += "</div>";
 
   divbubble.insertAdjacentHTML("beforeend", columna);
+  // eslint-disable-next-line no-console
 }
+// eslint-disable-next-line no-console
